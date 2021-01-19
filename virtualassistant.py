@@ -13,7 +13,7 @@ def speak(text):
     alexa.runAndWait()
 
 
-def speak_to_alice():
+def speak_to_alexa():
     try:
         with sr.Microphone() as source:
             print('Alexa is listening...')
@@ -26,7 +26,7 @@ def speak_to_alice():
     return command
 
 def actions():
-    command=speak_to_alice()
+    command=speak_to_alexa()
     if 'play' in command:
         song=command.replace('play','')
         speak('playing '+song)
